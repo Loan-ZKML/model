@@ -1,2 +1,2 @@
 # datagen
-ML Synthetic data generation
+ML Synthetic model + data generation
