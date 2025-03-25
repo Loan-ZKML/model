@@ -10,11 +10,15 @@ use std::io::Write;
 fn main() -> Result<()> {
     println!("Generate synthetic data");
 
-    fs::create_dir_all("proof_generation")?;
+    let path_to_synthetic_data = "synthetic_data";
+    fs::create_dir_all(path_to_synthetic_data)?;
 
     println!("Generating synthetic data with test addresses...");
     let data = generate_synthetic_data(1000)?;
-    save_data_as_json(&data, "proof_generation/credit_data.json")?;
+    save_data_as_json(
+        &data,
+        &format!("{}/credit_data.json", path_to_synthetic_data),
+    )?;
 
     Ok(())
 }
