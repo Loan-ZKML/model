@@ -174,5 +174,3 @@ cython_debug/
 # Added by cargo
 
 /target
-
-/proof_generation
