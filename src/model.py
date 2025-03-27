@@ -57,6 +57,7 @@ y_train = torch.tensor(scores, dtype=torch.float32)
 
 # Create the model
 model = LinearCreditScoreModel()
+model.train()
 criterion = nn.MSELoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 
